@@ -1,3 +1,8 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package project;
 
 import java.io.IOException;
@@ -11,14 +16,18 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
-public class ProjectController implements Initializable {
-    
+/**
+ * FXML Controller class
+ *
+ * @author Asus
+ */
+public class SignUpController implements Initializable {
+
     @FXML
     
-    private Button LogInButton;
+    private Button CreateAccountButton;
     
     @FXML
     public void GoToHome(ActionEvent event) throws IOException
@@ -31,24 +40,6 @@ public class ProjectController implements Initializable {
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         
         window.setScene(scene2);
-        
-        window.show();
-    }
-    @FXML
-    
-    private Button SignUpButton;
-    
-    @FXML
-    public void GoToSignUp(ActionEvent event) throws IOException
-     {
-        
-        Parent home = FXMLLoader.load(getClass().getResource("Sign Up.fxml"));
-        
-        Scene SignUpScene = new Scene(home);
-        
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        
-        window.setScene(SignUpScene);
         
         window.show();
     }
