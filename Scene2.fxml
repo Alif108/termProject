@@ -1,13 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ToolBar?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.1" fx:controller="project.Scene2Controller">
-   <children>
-      <Label layoutX="93.0" layoutY="116.0" prefHeight="22.0" prefWidth="92.0" text="Username" />
-      <PasswordField layoutX="82.0" layoutY="258.0" />
-   </children>
-</AnchorPane>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.Scene2Controller">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="Maths" layoutY="1.0" mnemonicParsing="false" onAction="#ShowMathsCourse" prefHeight="50.0" prefWidth="400.0" text="Blah" />
+            <Button layoutY="99.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="400.0" text="Button" />
+            <Button layoutY="51.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="400.0" text="Button" />
+            <Button layoutY="145.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="400.0" text="Button" />
+         </children>
+      </AnchorPane>
+   </center>
+   <top>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ToolBar layoutY="42.0" prefHeight="40.0" prefWidth="800.0">
+              <items>
+                <Button mnemonicParsing="false" text="Profile" />
+                  <Button mnemonicParsing="false" text="Button" />
+              </items>
+            </ToolBar>
+         </children>
+      </AnchorPane>
+   </top>
+   <left>
+      <AnchorPane prefHeight="458.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ProgressBar layoutY="5.0" prefWidth="200.0" progress="0.0" />
+            <ProgressBar layoutY="52.0" prefWidth="200.0" progress="0.0" />
+            <ProgressBar layoutY="100.0" prefWidth="200.0" progress="0.0" />
+            <ProgressBar layoutY="148.0" prefWidth="200.0" progress="0.0" />
+         </children>
+      </AnchorPane>
+   </right>
+   <bottom>
+      <AnchorPane prefHeight="179.0" prefWidth="801.0" BorderPane.alignment="CENTER">
+         <children>
+            <BarChart layoutX="-15.0" layoutY="52.0" prefHeight="200.0" prefWidth="800.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </BarChart>
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>
