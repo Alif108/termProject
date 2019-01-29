@@ -16,9 +16,12 @@ import javafx.stage.Stage;
 
 public class ProjectController implements Initializable {
     
-     
-     
-     public void GoToHome(ActionEvent event) throws IOException
+    @FXML
+    
+    private Button LogInButton;
+    
+    @FXML
+    public void GoToHome(ActionEvent event) throws IOException
      {
         
         Parent home = FXMLLoader.load(getClass().getResource("Scene2.fxml"));
@@ -28,6 +31,24 @@ public class ProjectController implements Initializable {
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         
         window.setScene(scene2);
+        
+        window.show();
+    }
+    @FXML
+    
+    private Button SignUpButton;
+    
+    @FXML
+    public void GoToSignUp(ActionEvent event) throws IOException
+     {
+        
+        Parent home = FXMLLoader.load(getClass().getResource("Sign Up.fxml"));
+        
+        Scene SignUpScene = new Scene(home);
+        
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        
+        window.setScene(SignUpScene);
         
         window.show();
     }
